@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="stalker2.css">
+
+<script type="text/javascript"src="js\jquery.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+
+<meta charset="utf-8">	
+	<title></title>
+</head>
+<body>
+ <div class="fon">
+ 
+	<div class="wrap">
+			
+		<div  class="header">
+		<div></div>
+			<div>
+
+				<span><b>Йога Нидра</b></span><p>Практика глубокого расслабления</p>
+			</div>
+			<div>
+				<p><img src="img/1.png">г. Омск, набережная Тухачевского, 17</p>
+				<p><img src="img/2.png">пт. 19.45-21.00</p>
+			</div>
+			<div><span><b>7(913)0066123</b></span></div>
+			<div class="booking"><p>Заказать обратный звонок</p> </div>
+		</div>
+			<div class="pop_up">
+				<div class="forma">
+					<div  class="close">
+						<p>x</p>
+					</div>
+					<span>Записаться на </span><span class="pink"> йогу нидру</span>
+					<label><input placeholder="Введите имя" name="name" class="name"></label>
+					<label><input placeholder="Номер телефона"name="phone" class="phone"></label>
+					<div class="button"type="submit"><p>Записаться</p></div>
+				</div>		
+			</div>
+		<div class="content">
+			<div><span>Получите </span> <span class="pink"> полное</span></div>
+			<div><span> физическое, умственное и эмоциональное </span></div>
+			<div><span class="pink"> расслабление </span><span> за 1,5 часа!</span></div>
+			<div class="content_text">
+				<div><img src="img/p_1.png">
+					<p>Легкая суставная разминка подготовит тело к раслаблению</p></div>
+				<div><img src="img/p_2.png">
+					<p>Детальное расслабление тела избавит от мышечных блоков и зажимов</p></div>
+				<div><img src="img/p_3.png">
+					<p>Эффетивная техника дыхания устранит волнения и стресс</p></div>
+				<div><img src="img/p_4.png">
+					<p>Екатерина Сущева прводит практику глубокого расслабления 6, 5 лет</p></div>
+			</div>
+			<div class="booking"><p>Записаться на занятие</p></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+trace("sfdf");
+	$('.booking').on('click',function(){$('.pop_up').addClass('visible');});
+	$('.close').on('click',function(){$('.pop_up').removeClass('visible');});
+</script>
+</body>
+</html>

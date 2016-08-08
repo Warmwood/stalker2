@@ -14,18 +14,16 @@
  
  
 	<div class="wrap">
-			
+			<div id="headerfon"></div>
 		<div  class="header">
-		<div></div>
+			
+				<div id="logo">
+				</div>
 			<div>
-
-				<span><b>Йога Нидра</b></span><p>Практика глубокого расслабления</p>
+				<div><p>г. Омск, набережная Тухачевского,17</p></div>
+				<div><p>пт. 19.45-21.00</p></div>
 			</div>
-			<div>
-				<p><img src="img/1.png">г. Омск, набережная Тухачевского, 17</p>
-				<p><img src="img/2.png">пт. 19.45-21.00</p>
-			</div>
-			<div><span><b>7(913)0066123</b></span></div>
+			<div><span><b>+7 (913) 00 66 123</b></span></div>
 			<div class="booking"><p>Заказать обратный звонок</p> </div>
 		</div>
 			<div class="pop_up">
@@ -33,16 +31,30 @@
 					<div  class="close">
 						<p>x</p>
 					</div>
-					<span>Записаться на </span><span class="pink"> йогу нидру</span>
-					<label><input placeholder="Введите имя" name="name" class="name"></label>
-					<label><input placeholder="Номер телефона"name="phone" class="phone"></label>
-					<div class="button"type="submit"><p>Записаться</p></div>
+					<form action="mail.php" method="post">
+						<span>Записаться на </span><span class="pink"> йогу нидру</span>
+						<label><input placeholder=" Введите имя" name="name" class="name"></label>
+						<label><input placeholder="  Номер телефона"name="phone" class="phone"></label>
+						<div class="button"type="submit"><p>Записаться</p></div>
+					</form>
+				</div>		
+			</div>
+			<div class="pop_up2">
+				<div class="forma2">
+					<div  class="close">
+						<p>x</p>
+					</div>
+					<div><img src="img/thanks_page.png"></div>
+					<span>Спасибо за вашу заявку!</span>
+					<p><b>Мы свяжемся с Вами в течении 20 минут</b></p>
+					
 				</div>		
 			</div>
 		<div class="content">
 			<div><span>Получите </span> <span class="pink"> полное</span></div>
 			<div><span> физическое, умственное и эмоциональное </span></div>
 			<div><span class="pink"> расслабление </span><span> за 1,5 часа!</span></div>
+			<div><p><b>Вы почувствуете себя отдохнувшем от рабочей неделе уже в пятницу</b></p></div>
 			<div class="content_text">
 				<div><img src="img/p_1.png">
 					<p>Легкая суставная разминка подготовит тело к раслаблению</p></div>
@@ -58,11 +70,21 @@
 	</div>
 
 <script type="text/javascript">
+if($.cookie("thx")) {
+	$('.pop_up').removeClass('visible');
+            $('.pop_pup2').each(function(){
+                $(this).show();
+                $.removeCookie('thx');
+            });
+        }
 
 	$('.booking').on('click',function(){
 		$('.pop_up').addClass('visible');});
 	$('.close').on('click',function(){
+		$('.pop_up2').removeClass('visible');
 		$('.pop_up').removeClass('visible');});
+	$('.booking').on('click',function(){
+		$('.pop_up').addClass('visible');});
 </script>
 </body>
 </html>
